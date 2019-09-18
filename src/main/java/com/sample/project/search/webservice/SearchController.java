@@ -14,7 +14,7 @@ import javax.servlet.http.*;
 @Controller("searchController")
 class SearchController {
 
-    @RequestMapping(value = "/searchTerm", method = RequestMethod.GET)
+    @RequestMapping(value = "/v1", method = RequestMethod.GET)
     void searchTerm(
         HttpServletResponse response,
 @RequestParam(value="searchTerm",required = true) String searchTerm) throws Exception

@@ -8,7 +8,7 @@ function searchClick(){
 
 	var inputValue= $("#inputSearch").val();
 	   $.ajax({
-        url: "http://localhost:8080/searchservice/webservice/searchTerm?searchTerm="+inputValue
+        url: "http://localhost:8080/searchservice/webservice/v1?searchTerm="+inputValue
     }).then(function(data) {
 		if(data.list.length>0){
 		$('#searchTable').remove();

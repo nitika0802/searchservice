@@ -18,7 +18,7 @@ public class SearchUtil {
        JSONObject searchResponse = null;
        query = URLEncoder.encode(query,"UTF-8");
         String url = String.format(requestQuery,query,maxFetchSize);
-        System.out.println("URL= " + url);
+        //System.out.println("URL= " + url);
         URL obj = new URL(url);
         HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
         conn.setRequestMethod("GET");
