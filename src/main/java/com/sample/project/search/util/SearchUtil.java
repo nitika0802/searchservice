@@ -8,6 +8,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +16,9 @@ public class SearchUtil {
 
    public static JSONObject getResponse(String query, int maxFetchSize,String requestQuery) throws Exception{
        JSONObject searchResponse = null;
+       query = URLEncoder.encode(query,"UTF-8");
         String url = String.format(requestQuery,query,maxFetchSize);
+        System.out.println("URL= " + url);
         URL obj = new URL(url);
         HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
         conn.setRequestMethod("GET");
