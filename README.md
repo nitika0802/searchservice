@@ -30,3 +30,9 @@ directory
 of the project
 •	Go to bin folder under apache installation directory and start tomcat server by double clicking startup.bat
 •	Once the server is up and running, and the application is deployed, proceed to testing the url and rest endpoints.
+
+Further Changes that could have been done--
+UI could have been made a lot better, to improve customer experience
+Implementation of the project could have been done using Spring Boot, so that Apache Tomcat installation and application deployment is not required
+More Unit Tests
+Better Exception Handling
