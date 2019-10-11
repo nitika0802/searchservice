@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.*;
 
 import java.util.List;
 
-public class SearchResultView {
+public class SearchResultView implements Comparable<SearchResultView> {
     String title;
     List<String> authorOrArtists;
     String bookOrAlbum;
@@ -36,6 +36,10 @@ public class SearchResultView {
 
     public void setBookOrAlbum(String bookOrAlbum) {
         this.bookOrAlbum = bookOrAlbum;
+    }
+
+    public int compareTo(SearchResultView searchResultView){
+        return this.title.compareTo(searchResultView.title);
     }
 }
 

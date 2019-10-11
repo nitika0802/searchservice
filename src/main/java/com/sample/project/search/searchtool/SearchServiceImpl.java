@@ -5,6 +5,8 @@ import com.sample.project.search.configuration.ReadProperties;
 import com.sample.project.search.util.SearchUtil;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class SearchServiceImpl {
@@ -29,6 +31,7 @@ public class SearchServiceImpl {
         long elapsedTimeBook = System.currentTimeMillis() - bookStartTime;
         long albumStartTime = System.currentTimeMillis();
         searchResultViewList.addAll(SearchUtil.getAlbumListView(SearchUtil.getResponse(searchTerm, maxFetchSize, properties.get(2))));
+        Collections.sort(searchResultViewList);
         long elapsedTimeAlbum = System.currentTimeMillis() - albumStartTime;
         DisplayView displayView = new DisplayView(searchResultViewList,elapsedTimeBook,elapsedTimeAlbum);
         return displayView;
