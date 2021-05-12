@@ -20,7 +20,7 @@
     <spring.version>4.3.6.RELEASE</spring.version>
     <spring.batch.version>3.0.7.RELEASE</spring.batch.version>
     <spring.security.cas.version>4.2.1.RELEASE</spring.security.cas.version>
-    <spring.security.version>4.2.1.RELEASE</spring.security.version>
+    <spring.security.version>5.2.10.RELEASE</spring.security.version>
     <hibernate.version>4.1.6.Final</hibernate.version>
     <junit.version>4.12</junit.version>
     <logback.version>1.0.6</logback.version>
